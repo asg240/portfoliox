@@ -10,16 +10,16 @@ function App() {
     <BrowserRouter>
     <div className="App">
 
-      <Route exact path="/" component={projects}/>
+      <Route exact path="/" component={about}/>
       <Route path="/components/articles" component={articles}/>
-      <Route path="/components/about" component={about}/>
+      <Route path="/components/projects" component={projects}/>
 
       <div className='nav'>
         <div className='nav-sub'>
 
-          <Link to="/" className="item">Projects</Link>
+          <Link to="/" className="item">About</Link>
           <Link to="/components/articles" className="item">Articles</Link>
-          <Link to="/components/about" className="item">About</Link>
+          <Link to="/components/projects" className="item">Projects</Link>
 
         </div>
       </div>
