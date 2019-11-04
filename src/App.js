@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom'; 
+import NavTabs from "./components/NavTabs";
 import projects from './components/projects.js'; 
-import articles from './components/articles.js'; 
+import contact from './components/contact.js'; 
 import about from './components/about.js'; 
 import './App.css';
 
@@ -9,20 +10,18 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-
-      <Route exact path="/" component={about}/>
-      <Route path="/components/articles" component={articles}/>
-      <Route path="/components/projects" component={projects}/>
-
       <div className='nav'>
-        <div className='nav-sub'>
-
-          <Link to="/" className="item">About</Link>
-          <Link to="/components/articles" className="item">Articles</Link>
-          <Link to="/components/projects" className="item">Projects</Link>
-
-        </div>
       </div>
+      <div>
+        <NavTabs />
+        <Route exact path="/" component={about} />
+        <Route exact path="/about" component={about} />
+        <Route exact path="/components/projects" component={projects} />
+        <Route path="/components/contact" component={contact} />
+      </div>
+ 
+
+
     </div>
     </BrowserRouter>
   );
