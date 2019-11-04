@@ -1,3 +1,3 @@
 ## Portfolio
 
-Revamp to my portfolio using
+Revamp to my portfolio using React
